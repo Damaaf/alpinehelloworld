@@ -2,8 +2,8 @@ pipeline {
      environment {
        IMAGE_NAME = "alpinehelloworld"
        IMAGE_TAG = "latest"
-       STAGING = "eazytraining-staging"
-       PRODUCTION = "eazytraining-production"
+       STAGING = "damaaf-staging"
+       PRODUCTION = "damaaf-production"
      }
      agent none
      stages {
@@ -31,7 +31,7 @@ pipeline {
            steps {
               script {
                 sh '''
-                    curl http://localhost | grep -q "Hello world!"
+                    curl http://172.17.0.1 | grep -q "Hello world!"
                 '''
               }
            }
