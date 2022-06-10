@@ -31,7 +31,7 @@ pipeline {
            steps {
               script {
                 sh '''
-                    curl http://8cbf-196-47-174-173.ngrok.io | grep -q "Hello world!"
+                    curl http://8cbf-196-47-174-173.ngrok.io/ | grep -q "Hello world!"
                 '''
               }
            }
